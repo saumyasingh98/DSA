@@ -30,14 +30,14 @@ class DoublyLinkedList:
         itr = self.get_lastnode()
         listr = ''
         while itr:
-            listr += itr.data + '--->'
+            listr += str(itr.data) + '--->'
             itr = itr.prev
 
         print(listr)
 
     def get_lastnode(self):
         itr=self.head
-        while itr:
+        while itr.next:
             itr=itr.next
         return itr
 
