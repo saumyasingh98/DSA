@@ -53,10 +53,7 @@ class DoublyLinkedList:
 
     def insert_at_beginning(self,data):
         if self.head == None:
-            
-
-
+            pass
 
 if __name__ == '__main__':
     ll=DoublyLinkedList()
-    ll.print_forward()
