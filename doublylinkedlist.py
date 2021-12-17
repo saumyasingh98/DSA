@@ -30,7 +30,7 @@ class DoublyLinkedList:
         itr = self.get_lastnode()
         listr = ''
         while itr:
-            listr += str(itr.data) + '--->'
+            listr += itr.data + '--->'
             itr = itr.prev
 
         print(listr)
@@ -53,7 +53,16 @@ class DoublyLinkedList:
 
     def insert_at_beginning(self,data):
         if self.head == None:
-            pass
+            self.head=Node(data, self.head, None)
+        else:
+            self.head.prev=Node(data, self.head, None)
+            self.head=Node(data, self.head, None)
+
 
 if __name__ == '__main__':
     ll=DoublyLinkedList()
+    ll.insert_at_beginning(56)
+    ll.insert_at_beginning(6)
+    ll.insert_at_beginning(5)
+    ll.print_forward()
+    ll.print_backward()
